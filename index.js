@@ -1,51 +1,5 @@
-//Connect two files.
-const coffeeMenu = [
-    {
-        name: "cappuccino",
-        price: 8,
-        seasonal: false,
-    },
-    {
-        name: "espresso",
-        price: 5,
-        seasonal: false,
-    },
-    {
-        name: "latte",
-        price: 5,
-        seasonal: false,
-    },
-    {
-        name: "affogato",
-        price: 9,
-        seasonal: true,
-    }, 
-    {
-        name: "macchiato",
-        price: 6,
-        seasonal: false,
-    },
-    {
-        name: "americano",
-        price: 7,
-        seasonal: false,
-    },
-    {
-        name: "iced coffee",
-        price: 6,
-        seasonal: false,
-    },
-    {
-        name: "frappe",
-        price: 8,
-        seasonal: false,
-    },
-    {
-        name: "cuban espresso",
-        price: 10,
-        seasonal: true,
-    }
-];
+//connect two files.
+const coffeeMenu = require('./coffee_data');
 
 //Return an array of all the drinks on the menu.
 const drinks = coffeeMenu.map(drink => drink.name);
@@ -70,5 +24,3 @@ console.log(seasonalDrinks);
 //Return all the seasonal drinks with the words "with imported beans" after the item name.
 const seasonalImportedDrinks = seasonalDrinks.map(drink => `${drink.name} with imported beans`);
 console.log(seasonalImportedDrinks);
-
-module.exports = coffeeMenu;
